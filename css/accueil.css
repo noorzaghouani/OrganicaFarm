@@ -1,0 +1,23 @@
+/* 
+ * Page Accueil - Specific Styles
+ * Externalizing inline styles from accueil.html
+ */
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
