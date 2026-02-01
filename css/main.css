@@ -21,7 +21,11 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Playfair Display', serif;
     color: var(--dark-color);
 }
@@ -99,7 +103,7 @@ h1, h2, h3, h4, h5 {
 /* Hero Section */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('https://www.benchmarklabs.com/wp-content/uploads/2022/05/Modern-Methods-of-Water-Management-in-Organic-Farming-for-2022.webp');
+        url('https://www.benchmarklabs.com/wp-content/uploads/2022/05/Modern-Methods-of-Water-Management-in-Organic-Farming-for-2022.webp');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -306,16 +310,16 @@ footer {
     .hero-section {
         padding: 80px 0;
     }
-    
+
     .hero-section h1 {
         font-size: 2rem;
     }
-    
+
     .filter-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .filter-btn {
         width: 200px;
     }
