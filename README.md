@@ -45,24 +45,27 @@ A modern, fully responsive organic farm website showcasing fresh fruits and vege
 ```
 OrganicaFarm/
 │
-├── 📄 HTML Pages (6 files)
+├── 📄 HTML Pages (7 files)
 │   ├── index.html          # Homepage
 │   ├── accueil.html        # Welcome page
+│   ├── checkout.html       # Customer payment
 │   ├── aboutus.html        # About us
 │   ├── products.html       # Product catalog
 │   ├── feedback.html       # Customer testimonials
 │   └── contact.html        # Contact form
 │
-├── 🎨 CSS Stylesheets (3 files)
+├── 🎨 CSS Stylesheets (4 files)
 │   ├── main.css           # Global styles (6.4 KB)
+│   └── checkout.css       # checkout page styles
 │   ├── contact.css        # Contact page styles
 │   └── accueil.css        # Home page styles
 │
-├── 💻 JavaScript Modules (4 files)
+├── 💻 JavaScript Modules (5 files)
 │   ├── template-loader.js # Template system
-│   ├── main.js           # Shopping cart
-│   ├── products.js       # Product filtering
-│   └── contact.js        # Form validation
+│   ├── main.js            # Shopping cart
+│   ├── products.js        # Product filtering
+│   └── checkout.js        # payment validation
+│   └── contact.js         # Form validation
 │
 ├── 🧩 Templates (2 files)
 │   ├── navigation.html   # Reusable navbar
@@ -159,3 +162,4 @@ GitHub: [@noorzaghouani](https://github.com/noorzaghouani)
 [⭐ Star this repo](https://github.com/noorzaghouani/OrganicaFarm) |
 
 </div>
+
