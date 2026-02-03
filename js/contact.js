@@ -14,11 +14,11 @@ class FormValidator {
                 validators: [
                     {
                         test: (val) => val.trim().length >= 3,
-                        message: 'Le nom doit contenir au moins 3 caractères'
+                        message: 'Name must contain at least 3 characters'
                     },
                     {
                         test: (val) => /^[a-zA-ZÀ-ÿ\s\-']+$/.test(val),
-                        message: 'Le nom ne peut contenir que des lettres'
+                        message: 'Name can only contain letters'
                     }
                 ]
             },
@@ -27,7 +27,7 @@ class FormValidator {
                 validators: [
                     {
                         test: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
-                        message: 'Veuillez entrer une adresse email valide'
+                        message: 'Please enter a valid email address'
                     }
                 ]
             },
@@ -36,7 +36,7 @@ class FormValidator {
                 validators: [
                     {
                         test: (val) => !val || /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(val),
-                        message: 'Veuillez entrer un numéro de téléphone valide',
+                        message: 'Please enter a valid phone number',
                         optional: true
                     }
                 ]
@@ -46,7 +46,7 @@ class FormValidator {
                 validators: [
                     {
                         test: (val) => val.trim().length >= 10,
-                        message: 'Le message doit contenir au moins 10 caractères'
+                        message: 'Message must contain at least 10 characters'
                     }
                 ]
             }
@@ -142,7 +142,7 @@ class FormValidator {
         message.className = 'alert alert-success';
         message.innerHTML = `
             <i class="fas fa-check-circle me-2"></i>
-            Message envoyé avec succès! Nous vous contacterons bientôt.
+            Message sent successfully! We will contact you soon.
         `;
         this.form.insertBefore(message, this.form.firstChild);
 
@@ -154,7 +154,7 @@ class FormValidator {
         message.className = 'alert alert-danger';
         message.innerHTML = `
             <i class="fas fa-exclamation-circle me-2"></i>
-            Veuillez corriger les erreurs dans le formulaire.
+            Please correct the errors in the form.
         `;
         this.form.insertBefore(message, this.form.firstChild);
 

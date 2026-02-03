@@ -59,6 +59,8 @@ function initializeProductCart() {
             const title = card.querySelector('.card-title').textContent;
             const priceText = card.querySelector('.price').textContent;
             const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+            const imageEl = card.querySelector('.product-img');
+            const image = imageEl ? imageEl.src : 'https://via.placeholder.com/80';
             const productId = `product-${Date.now()}-${Math.random()}`;
 
             // Add to cart
@@ -66,7 +68,8 @@ function initializeProductCart() {
                 window.cart.addItem({
                     id: productId,
                     name: title,
-                    price: price
+                    price: price,
+                    image: image
                 });
             }
         });

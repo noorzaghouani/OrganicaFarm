@@ -152,6 +152,31 @@ h5 {
     background-color: var(--secondary-color);
 }
 
+/* Remove Bootstrap Blue Focus Ring */
+.btn-primary:focus,
+.btn-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.quantity-btn:focus,
+.quantity-btn:active,
+.btn-close:focus {
+    box-shadow: 0 0 0 0.25rem rgba(74, 142, 60, 0.25) !important;
+    border-color: var(--primary-color) !important;
+    outline: none !important;
+}
+
+.btn-primary:active,
+.btn-primary:active:focus {
+    background-color: var(--dark-color) !important;
+    border-color: var(--dark-color) !important;
+}
+
+.btn-outline-primary:active,
+.btn-outline-primary:active:focus {
+    background-color: var(--primary-color) !important;
+    color: var(--white) !important;
+}
+
 /* About Section */
 .about-section {
     background-color: var(--light-color);
@@ -305,6 +330,134 @@ footer {
     right: 20px;
 }
 
+/* ==========================================
+   Cart Modal Styles
+   ========================================== */
+
+/* Cart Item Container */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.cart-item:hover {
+    background-color: #f9f9f9;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Cart Item Image */
+.cart-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Item Details */
+.cart-item-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Quantity Controls */
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.quantity-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--primary-color);
+    background: var(--white);
+    color: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.quantity-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.quantity-btn:active {
+    transform: scale(0.95);
+}
+
+.quantity-value {
+    min-width: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Remove Button */
+.cart-item-remove {
+    color: #dc3545;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.cart-item-remove:hover {
+    background-color: #dc3545;
+    color: var(--white);
+}
+
+/* Empty Cart Message */
+#cart-empty-message {
+    padding: 40px 20px;
+}
+
+#cart-empty-message i {
+    opacity: 0.3;
+}
+
+/* Modal Footer Total */
+#cart-total {
+    font-size: 1.5rem;
+}
+
+/* Modal Customize */
+.modal-header {
+    background-color: var(--light-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.modal-title {
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-section {
@@ -322,5 +475,15 @@ footer {
 
     .filter-btn {
         width: 200px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item-img {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }

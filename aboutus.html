@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>About Us - OrganicaFarm | Our Story Since 1985</title>
+    <title>About Us - OrganicaFarm </title>
     <meta name="description"
         content="Discover OrganicaFarm's story, family farm since 1985. 15 hectares organic, 3 generations of expertise.">
     <meta name="keywords"
@@ -37,10 +37,44 @@
 
 <body>
     <!-- Skip Link -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation placeholder -->
-    <div data-include="navigation"></div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" role="navigation" aria-label="Navigation principale">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-leaf me-2" aria-hidden="true"></i>Organica Farm
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-outline-primary" href="#" aria-label="Shopping cart">
+                            <i class="fas fa-shopping-cart me-1" aria-hidden="true"></i> Cart (0)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Main Content -->
     <main id="main-content">
@@ -76,8 +110,78 @@
         </section>
     </main>
 
-    <!-- Footer placeholder -->
-    <div data-include="footer"></div>
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">
+                        <i class="fas fa-shopping-cart me-2"></i>Your Shopping Cart
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-items-container"></div>
+                    <div id="cart-empty-message" class="text-center py-4" style="display:none;">
+                        <i class="fas fa-shopping-basket fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">Your cart is empty</p>
+                        <a href="products.html" class="btn btn-primary mt-2">Start Shopping</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="w-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0">Total:</h5>
+                            <h5 class="mb-0 text-primary" id="cart-total">$0.00</h5>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                <i class="fas fa-arrow-left me-2"></i>Continue Shopping
+                            </button>
+                            <button type="button" class="btn btn-primary" id="checkout-btn">
+                                <i class="fas fa-check me-2"></i>Proceed to Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="textfooter">Organica Farm</h4>
+                    <p>Because you Deserve the Best!</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+                    </div>
+                    <h4 class="textfooter mt-3">Opening Hours</h4>
+                    <p>Mon - Fri 8AM &gt; 17PM</p>
+                    <p>Sat 8AM &gt; 14PM</p>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="textfooter">Find us</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6359.275701668725!2d10.050830877425604!3d37.16130982746121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2dd007fd2bbb5%3A0x6469f7d34ce4d210!2sHenna%20Bio!5e0!3m2!1sfr!2stn!4v1756034823597!5m2!1sfr!2stn"
+                        width="800" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Google Maps location"></iframe>
+                </div>
+            </div>
+
+            <div class="text-center copyright">
+                <p>&copy; 2025 All rights reserved.</p>
+                <p><span class="textfooter">Edited by:</span></p>
+                <p>Nour ZAGHOUANI</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
